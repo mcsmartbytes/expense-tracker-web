@@ -21,9 +21,7 @@ flutter pub get
 echo "[vercel_build] Building web (release) with env.json..."
 flutter build web --release --dart-define-from-file=env.json --pwa-strategy=none --no-wasm-dry-run
 
-
 echo "[vercel_build] Copying vercel.json into build/web..."
 cp -f web/vercel.json build/web/ 2>/dev/null || true
 
 echo "[vercel_build] Done. Output at: build/web"
-
